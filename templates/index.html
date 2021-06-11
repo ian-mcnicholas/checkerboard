@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+
+        <style>
+
+            table tr td{
+                width: 50px;
+                height: 50px;
+            }
+            .color1{
+                background-color:{{color1}}; 
+            }
+            .color2{
+                background-color:{{color2}}; 
+            }
+        </style>
+</head>
+<body>
+   
+    <table>
+    <!-- {% for i in range(1):%}
+        <tr>
+            {% for j in range(5): %}
+            <td class= 'color1'></td>
+            <td class= 'color2'></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for j in range(1): %}
+            <td class= 'color2'></td>
+            <td class= 'color1'></td>
+            {% endfor %}
+        </tr>
+    {% endfor %} -->
+
+    {% for i in range(y):%}
+        <tr>
+            {% for j in range(x): %}
+            <td class= 'color{{ (i+j)%2+1 }}'>
+
+            </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
